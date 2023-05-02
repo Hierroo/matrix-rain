@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+}
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+}
+.main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.canvas {
+    border-collapse: collapse;
+    border: none;
+    
+    /*---TELA INTEIRA
+    width: 100vw;
+    height: 100vh;
+    ---*/
+    
+    width: 100%;
+    height: 100%;
+    
+    
+
+}
+
+/*----EACH TABLE DATA---*/
+.column {
+    position: relative;
+    text-align: center;
+    
+    padding: 0px;
+    
+    color: white;
+    background-color: black;
+
+    border: none;
+    
+      
+}
+
+
+/*----EACH DATA---*/
+.data {
+    font-family: monospace;
+    font-size: auto;
+    border: none;
+}
+
+.index {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    
+    font-size: 3px;
+    font-family: monospace;
+    
+    color: yellow;
+}
+
+
+.rastro-glyph {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0.1;
+}
+.glyph {
+   
+    font-family: monospace;
+    font-size: auto;
+    color: white;
+    
+    text-shadow: 1px 1px 12px rgb(39, 242, 39);
+}
+
+
