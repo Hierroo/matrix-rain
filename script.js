@@ -1,11 +1,12 @@
 //const canvas = document.querySelector(".canvas")
 
-
+// 30x20
+//15x20 - 360px 800px
 //CONSERTAR BUG DO INDEX DA LINHA 0 COLUNA 0
 
 const fragment = document.createDocumentFragment()
 const pixelsArray = []
-const largura = 30
+const largura = 20
 const altura = 20
 let debug = false
 
@@ -13,7 +14,7 @@ let debug = false
 const btn = document.querySelector(".btn")
 //btn.addEventListener("click", changeDebug)
 
-const colors = [ "000000", "004010", "008020", "00c030", "00e038", "00f03c", "00f83e", "00fc3f", "00fe40", "ffffff" ]
+const colors = [ "000000", "004010", "008020", "00c030", "00e038", "00f03c", "00f03c", "00f03c", "00f83e", "00fc3f", "00fe40", "00fe40", "00fe40", "00fe40", "ffffff" ]
 
 const chars = [
     'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'ゐ', 'ゑ', 'を', 'ん', 'が', 'ぎ', 'ぐ', 'げ', 'ご', 'ざ', 'じ', 'ず', 'ぜ', 'ぞ', 'だ', 'ぢ', 'づ', 'で', 'ど', 'ば', 'び', 'ぶ', 'べ', 'ぼ', 'ぱ', 'ぴ', 'ぷ', 'ぺ', 'ぽ', 'ぁ', 'ぃ', 'ぅ', 'ぇ', 'ぉ', 'ア', 'イ', 'ウ', 'エ', 'オ','カ', 'キ', 'ク', 'ケ', 'コ','サ', 'シ', 'ス', 'セ', 'ソ','タ', 'チ', 'ツ', 'テ', 'ト','ナ', 'ニ', 'ヌ', 'ネ', 'ノ','ハ', 'ヒ', 'フ', 'ヘ', 'ホ','マ', 'ミ', 'ム', 'メ', 'モ','ヤ', 'ユ', 'ヨ','ラ', 'リ', 'ル', 'レ', 'ロ','ワ', 'ヰ', 'ヱ', 'ヲ','ン','ガ', 'ギ', 'グ', 'ゲ', 'ゴ','ザ', 'ジ', 'ズ', 'ゼ', 'ゾ','ダ', 'ヂ', 'ヅ', 'デ', 'ド','バ', 'ビ', 'ブ', 'ベ', 'ボ','パ', 'ピ', 'プ', 'ペ', 'ポ', 'ァ', 'ィ', 'ゥ', 'ェ', 'ォ', '0', '1', '2' ,'3' ,'4' ,'5' ,'6' ,'7' ,'8', '9']
@@ -37,7 +38,7 @@ function start() {
     setInterval(CreateGlyphsData, 2000)
     RenderDataStructure()
     rainEffect()
-    setInterval(rainEffect, 150)
+    setInterval(rainEffect, 120)
       
 }
 
@@ -164,7 +165,7 @@ async function rainEffect() {
 
     const column = Math.floor(Math.random() * (largura +1))
 
-    for (let row = 0; row < (altura + 9); row++){
+    for (let row = 0; row < (altura + 15); row++){
         
         //for (let col = 0; col < altura; col++)
         //const column = Math.floor(Math.random() * altura)
@@ -191,7 +192,7 @@ function updateData(index){
     
     pixelsArray[ baixo ] = 0
     
-    pixelsArray[index] = 9
+    pixelsArray[index] = 14
     
     
     // for (let i = 0; i <= 3; i++) {
@@ -220,7 +221,7 @@ function fade(index) {
     // pixelsArray[cima] = current - 1
     //pixelsArray[ baixo ] = 0
     
-    for (let i = 1; i <= 9; i++){
+    for (let i = 1; i <= 15; i++){
         const cima = index - (largura * i)
         const value = current - i
         
@@ -231,6 +232,7 @@ function fade(index) {
         if (pixelsArray[ cima ] === 0){
            break
         }
+        
         pixelsArray[ cima ] = value
         
         
