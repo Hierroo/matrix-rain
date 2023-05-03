@@ -6,8 +6,8 @@
 
 const fragment = document.createDocumentFragment()
 const pixelsArray = []
-const largura = 20
-const altura = 20
+const largura = 30
+const altura = 30
 let debug = false
 
 
@@ -38,7 +38,7 @@ function start() {
     setInterval(CreateGlyphsData, 2000)
     RenderDataStructure()
     rainEffect()
-    setInterval(rainEffect, 120)
+    setInterval(rainEffect, 100)
       
 }
 

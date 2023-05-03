@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "matrix";
+    src: url(arquivos/Matrix-Code.ttf);
+}
+
 * {
     margin: 0px;
 }
@@ -79,7 +84,7 @@ body {
 }
 .glyph {
    
-    font-family: monospace;
+    font-family: "matrix";
     font-size: auto;
     color: white;
     
