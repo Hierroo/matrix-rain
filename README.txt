@@ -11,3 +11,6 @@ Ainda em desenvolvimento. Objetivos:
     - ( -5 ) saúde e bem estar
     - ( +8 ) entradas capilares
     - ( -4/48h ) funcionamento neural
+
+TODO:
+[] - add canvas
